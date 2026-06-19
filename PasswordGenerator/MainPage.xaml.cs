@@ -5,7 +5,7 @@ namespace PasswordGenerator;
 
 public partial class MainPage : ContentPage
 {
-    // Список последних паролей (хранится только в памяти)
+    // Список последних паролей (хранение в памяти)
     private readonly ObservableCollection<string> _history = new();
     private string _currentPassword = string.Empty;
 
@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
         HistoryList.ItemsSource = _history;
     }
 
-    // Двигаем ползунок длины и показываем число
+    // Двигаю ползунок длины показывает число
     private void OnLengthChanged(object sender, ValueChangedEventArgs e)
     {
         int len = (int)Math.Round(e.NewValue);
@@ -85,7 +85,7 @@ public partial class MainPage : ContentPage
             PasswordStrength.Weak => ("Слабый", 0.40),
             PasswordStrength.Medium => ("Средний", 0.60),
             PasswordStrength.Strong => ("Сильный", 0.80),
-            PasswordStrength.VeryStrong => ("Очень сильный", 1.00),
+            PasswordStrength.VeryStrong => ("Очень сложный", 1.00),
             _ => ("—", 0.0)
         };
 

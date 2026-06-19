@@ -62,7 +62,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Индикатор надёжности -->
+            <!-- Индикация надёжности -->
             <VerticalStackLayout Spacing="8" Margin="4,8,4,0">
                 <Grid ColumnDefinitions="*,Auto">
                     <Label Grid.Column="0" Text="Надёжность" TextColor="#9E9E9E" FontSize="13"/>
@@ -127,7 +127,8 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Кнопка генерации -->
+            <!-- Кнопка генерации  -->
+            <!-- Кнопка генерации паролей -->
             <Button Text="Сгенерировать"
                     Clicked="OnGenerateClicked"
                     BackgroundColor="#696969"
